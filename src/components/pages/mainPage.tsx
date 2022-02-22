@@ -1,7 +1,7 @@
 import React, { CSSProperties } from "react";
-import SectionCard from "./sectionCard";
+import SectionCard from "../sectionCard";
 
-function Main() {
+function MainPage() {
   return (
     <div style={rootStyle}>
       <SectionCard title="forest" />
@@ -20,4 +20,4 @@ const rootStyle: CSSProperties = {
   background: "#444",
 };
 
-export default Main;
+export default MainPage;

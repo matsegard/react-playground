@@ -1,8 +1,15 @@
-import React from "react";
+import React, { StrictMode } from "react";
+import { BrowserRouter } from "react-router-dom";
 import Layout from "./layout";
 
 function App() {
-  return <Layout />;
+  return (
+    <StrictMode>
+      <BrowserRouter>
+        <Layout />
+      </BrowserRouter>
+    </StrictMode>
+  );
 }
 
 export default App;
