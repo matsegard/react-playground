@@ -1,12 +1,18 @@
 import React, { CSSProperties } from "react";
 import Header from "./header";
-import Main from "./main";
+import MainPage from "./pages/mainPage";
+import { Route, Switch } from "react-router-dom";
+import DetailPage from "./pages/detailPage";
 
 function Layout() {
   return (
     <div style={rootStyle}>
       <Header />
-      <Main />
+      <Switch>
+        <Route exact path="/" component={MainPage} />
+        <Route path="/detail/:name" component={DetailPage} />
+        <div>404</div>
+      </Switch>
     </div>
   );
 }
